@@ -7,5 +7,5 @@ Tracked automatically. One step per day.
 - [x] add core supabase client utilities
 - [ ] add core lib utilities (supabase clients, crypto, openrouter)
 - [ ] build api routes for projects and articles
-- [ ] add crypto and openrouter lib utilities
+- [x] add crypto and openrouter lib utilities
 - [ ] add remaining core lib utilities (billing, generate, crawl, visibility)
