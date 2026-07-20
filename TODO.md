@@ -13,4 +13,6 @@ Tracked automatically. One step per day.
 - [x] add remaining supporting lib utilities
 - [ ] add remaining core lib utilities (billing, generate, crawl, visibility)
 - [ ] add supporting lib utilities (analyze, backlinks, plan, publish, stamp, stripe, mode)
-- [ ] wire up middleware for auth and routing
+- [x] wire up middleware for auth and routing
+- [ ] add app layout and global styles
+- [ ] create dashboard and auth pages
