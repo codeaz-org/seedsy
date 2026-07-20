@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-night text-parchment antialiased;
+  background-image:
+    radial-gradient(1200px 800px at 85% -10%, rgba(79, 184, 120, 0.09), transparent 60%),
+    radial-gradient(900px 700px at -10% 110%, rgba(201, 241, 78, 0.05), transparent 55%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #c9f14e;
+  color: #0b120e;
+}
+
+/* Film grain over everything — the texture that makes the dark read as material */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-signal px-5 py-2.5 text-sm font-semibold text-night transition hover:brightness-110 hover:shadow-[0_0_24px_rgba(201,241,78,0.35)] disabled:opacity-50 disabled:shadow-none;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-parchment/20 px-5 py-2.5 text-sm font-medium text-parchment transition hover:border-signal/60 hover:text-signal disabled:opacity-50;
+}
+.btn-danger {
+  @apply inline-flex items-center justify-center rounded-full border border-ember/40 px-5 py-2.5 text-sm font-medium text-ember transition hover:bg-ember/10;
+}
+.card {
+  @apply rounded-2xl border border-parchment/10 bg-pine/80 p-5 backdrop-blur-sm;
+}
+.card-raise {
+  @apply rounded-2xl border border-parchment/10 bg-thicket p-5;
+}
+.label {
+  @apply font-mono text-[11px] uppercase tracking-[0.16em] text-sage;
+}
+.input {
+  @apply w-full rounded-xl border border-parchment/15 bg-night/60 px-4 py-2.5 text-sm text-parchment outline-none placeholder:text-sage/50 focus:border-signal/70;
+}
+select.input option {
+  @apply bg-pine text-parchment;
+}
+.chip {
+  @apply inline-flex items-center rounded-full border border-parchment/10 bg-thicket px-3 py-1 text-xs text-parchment/90;
+}
+.hairline {
+  @apply border-t border-parchment/10;
+}
+
+/* Status dots */
+.dot {
+  @apply inline-block h-1.5 w-1.5 shrink-0 rounded-full;
+}
+
+/* Animated ellipsis for busy buttons */
+.working::after {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  text-align: left;
+  animation: workingDots 1.2s steps(4) infinite;
+}
+@keyframes workingDots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+}
+
+/* Article prose — dark app theme */
+.prose-article h1 { @apply font-display text-3xl mt-6 mb-3 text-parchment; }
+.prose-article h2 { @apply font-display text-xl mt-8 mb-2 text-parchment; }
+.prose-article h3 { @apply font-display text-lg mt-6 mb-2 text-parchment; }
+.prose-article p { @apply my-3 leading-relaxed text-parchment/85; }
+.prose-article ul, .prose-article ol { @apply my-3 ml-6 list-disc text-parchment/85; }
+.prose-article a { @apply text-signal underline decoration-signal/40 underline-offset-2 hover:decoration-signal; }
+.prose-article blockquote { @apply my-4 border-l-2 border-signal/60 pl-4 italic text-parchment/75; }
+.prose-article strong { @apply text-parchment; }
+.prose-article code { @apply font-mono text-[0.9em] text-signal; }
+
+/* Paper theme for the public hosted blog (/b) — light, editorial, readable */
+.paper {
+  @apply bg-porcelain text-ink;
+  min-height: 100vh;
+}
+.paper ::selection { background: #1f6b45; color: #f7f5ec; }
+.paper .label { @apply text-bark; }
+.paper .prose-article h1, .paper .prose-article h2, .paper .prose-article h3 { @apply text-ink; }
+.paper .prose-article p, .paper .prose-article ul, .paper .prose-article ol { @apply text-ink/85; }
+.paper .prose-article a { @apply text-leaf-deep decoration-leaf-deep/40; }
+.paper .prose-article blockquote { @apply border-leaf-deep/50 text-ink/70; }
+.paper .prose-article code { @apply text-leaf-deep; }
