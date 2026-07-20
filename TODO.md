@@ -16,4 +16,4 @@ Tracked automatically. One step per day.
 - [x] wire up middleware for auth and routing
 - [x] add app layout and global styles
 - [ ] create dashboard and auth pages
-- [ ] add postcss config for tailwind processing
+- [x] add postcss config for tailwind processing
