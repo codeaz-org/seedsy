@@ -17,3 +17,7 @@ Tracked automatically. One step per day.
 - [x] add app layout and global styles
 - [ ] create dashboard and auth pages
 - [x] add postcss config for tailwind processing
+- [x] add project and article API routes
+- [ ] add article generate and publish API routes
+- [ ] add billing API routes (checkout, portal, webhook)
+- [ ] add cron API routes (backlinks, generate, visibility)
