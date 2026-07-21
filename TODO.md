@@ -23,6 +23,7 @@ Tracked automatically. One step per day.
 - [x] add cron API routes for backlinks, generate, and visibility
 - [x] add remaining API routes for social, visibility run, and project plan
 - [x] add auth callback and integrations API routes
+- [x] create landing page and auth pages
 - [ ] add cron API routes (backlinks, generate, visibility)
 - [ ] add article social API route
 - [ ] add visibility run API route
@@ -30,3 +31,5 @@ Tracked automatically. One step per day.
 - [ ] add integrations API route
 - [ ] add auth callback route
 - [ ] add project workspace layout and pages
+- [ ] add dashboard page
+- [ ] add billing page
