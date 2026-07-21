@@ -19,6 +19,6 @@ Tracked automatically. One step per day.
 - [x] add postcss config for tailwind processing
 - [x] add project and article API routes
 - [x] add article generate and publish API routes
-- [ ] add billing API routes (checkout, portal, webhook)
+- [x] add billing API routes (checkout, portal, webhook)
 - [ ] add cron API routes (backlinks, generate, visibility)
 - [ ] add article social API route
