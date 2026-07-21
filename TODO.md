@@ -21,7 +21,10 @@ Tracked automatically. One step per day.
 - [x] add article generate and publish API routes
 - [x] add billing API routes (checkout, portal, webhook)
 - [x] add cron API routes for backlinks, generate, and visibility
+- [x] add remaining API routes for social, visibility run, and project plan
 - [ ] add cron API routes (backlinks, generate, visibility)
 - [ ] add article social API route
 - [ ] add visibility run API route
 - [ ] add project plan API route
+- [ ] add integrations API route
+- [ ] add auth callback route
