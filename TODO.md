@@ -30,6 +30,9 @@ Tracked automatically. One step per day.
 - [ ] add project plan API route
 - [ ] add integrations API route
 - [ ] add auth callback route
-- [ ] add project workspace layout and pages
+- [x] add project workspace layout and pages
 - [ ] add dashboard page
 - [ ] add billing page
+- [ ] add project articles list and article editor pages
+- [ ] add project backlinks and visibility pages
+- [ ] add project integrations page
