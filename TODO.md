@@ -31,6 +31,7 @@ Tracked automatically. One step per day.
 - [ ] add integrations API route
 - [ ] add auth callback route
 - [x] add project workspace layout and pages
+- [x] add dashboard and billing pages
 - [ ] add dashboard page
 - [ ] add billing page
 - [ ] add project articles list and article editor pages
