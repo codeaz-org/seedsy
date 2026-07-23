@@ -34,6 +34,6 @@ Tracked automatically. One step per day.
 - [x] add dashboard and billing pages
 - [ ] add dashboard page
 - [ ] add billing page
-- [ ] add project articles list and article editor pages
+- [x] add project articles list and article editor pages
 - [ ] add project backlinks and visibility pages
 - [ ] add project integrations page
