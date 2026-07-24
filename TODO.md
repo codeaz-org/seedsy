@@ -35,5 +35,8 @@ Tracked automatically. One step per day.
 - [ ] add dashboard page
 - [ ] add billing page
 - [x] add project articles list and article editor pages
-- [ ] add project backlinks and visibility pages
+- [x] add project backlinks and visibility pages
 - [ ] add project integrations page
+- [ ] add legal pages (privacy, terms, refunds)
+- [ ] add public blog routes (app/b/[projectId]/page.tsx, app/b/[projectId]/[slug]/page.tsx)
+- [ ] add shared UI components (ArticleEditor, IntegrationForm, SettingsForm, nav)
