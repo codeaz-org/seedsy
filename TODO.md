@@ -38,8 +38,9 @@ Tracked automatically. One step per day.
 - [x] add project backlinks and visibility pages
 - [x] add shared UI components for navigation, article editor, and settings
 - [ ] add project integrations page
-- [ ] add legal pages (privacy, terms, refunds)
+- [x] add legal pages (privacy, terms, refunds)
 - [ ] add public blog routes (app/b/[projectId]/page.tsx, app/b/[projectId]/[slug]/page.tsx)
 - [ ] add shared UI components (ArticleEditor, IntegrationForm, SettingsForm, nav)
 - [ ] add integration form and social components
 - [ ] add public blog routes
+- [ ] add cookie banner component
