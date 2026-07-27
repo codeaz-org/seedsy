@@ -42,5 +42,6 @@ Tracked automatically. One step per day.
 - [ ] add public blog routes (app/b/[projectId]/page.tsx, app/b/[projectId]/[slug]/page.tsx)
 - [ ] add shared UI components (ArticleEditor, IntegrationForm, SettingsForm, nav)
 - [ ] add integration form and social components
-- [ ] add public blog routes
+- [x] add public blog routes
 - [ ] add cookie banner component
+- [ ] add deployment config and docker files
