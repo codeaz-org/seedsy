@@ -43,5 +43,6 @@ Tracked automatically. One step per day.
 - [ ] add shared UI components (ArticleEditor, IntegrationForm, SettingsForm, nav)
 - [ ] add integration form and social components
 - [x] add public blog routes
+- [x] add reset-password page
 - [ ] add cookie banner component
 - [ ] add deployment config and docker files
