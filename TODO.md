@@ -44,5 +44,5 @@ Tracked automatically. One step per day.
 - [ ] add integration form and social components
 - [x] add public blog routes
 - [x] add reset-password page
-- [ ] add cookie banner component
+- [x] add cookie banner component
 - [ ] add deployment config and docker files
