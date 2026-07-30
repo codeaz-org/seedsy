@@ -41,8 +41,10 @@ Tracked automatically. One step per day.
 - [x] add legal pages (privacy, terms, refunds)
 - [ ] add public blog routes (app/b/[projectId]/page.tsx, app/b/[projectId]/[slug]/page.tsx)
 - [ ] add shared UI components (ArticleEditor, IntegrationForm, SettingsForm, nav)
-- [ ] add integration form and social components
+- [x] add integration form and social components
 - [x] add public blog routes
 - [x] add reset-password page
 - [x] add cookie banner component
 - [ ] add deployment config and docker files
+- [ ] add AI and billing action components
+- [ ] add project docs and README
