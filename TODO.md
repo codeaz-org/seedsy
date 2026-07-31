@@ -45,6 +45,8 @@ Tracked automatically. One step per day.
 - [x] add public blog routes
 - [x] add reset-password page
 - [x] add cookie banner component
-- [ ] add deployment config and docker files
+- [x] add deployment config and docker files
 - [ ] add AI and billing action components
 - [ ] add project docs and README
+- [ ] add vercel.json deployment config
+- [ ] add CI workflow for github actions

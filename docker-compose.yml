@@ -1,0 +1,41 @@
+# Seedsy self-hosted.
+# Supabase is EXTERNAL — use a free supabase.com project or your own
+# self-hosted Supabase, run both SQL files from /supabase there, and put the
+# keys in .env (copy .env.example). This compose only runs the app.
+services:
+  app:
+    build:
+      context: .
+      args:
+        # NEXT_PUBLIC_* values are inlined at build time — passed as build args.
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
+        NEXT_PUBLIC_DEPLOYMENT_MODE: ${NEXT_PUBLIC_DEPLOYMENT_MODE:-self_hosted}
+        NEXT_PUBLIC_CLOUD_URL: ${NEXT_PUBLIC_CLOUD_URL:-https://seedsy.example.com}
+    env_file: .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  # Crons: Vercel's scheduler doesn't exist here. Either add a host crontab —
+  #   30 5 * * *  curl -s -H "Authorization: Bearer $CRON_SECRET" http://localhost:3000/api/cron/backlinks
+  #   0  6 * * *  curl -s -H "Authorization: Bearer $CRON_SECRET" http://localhost:3000/api/cron/generate
+  #   0  7 * * 1  curl -s -H "Authorization: Bearer $CRON_SECRET" http://localhost:3000/api/cron/visibility
+  # — or uncomment this ofelia sidecar:
+  #
+  # cron:
+  #   image: mcuadros/ofelia:latest
+  #   depends_on: [app]
+  #   command: daemon --docker
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #   environment:
+  #     CRON_SECRET: ${CRON_SECRET}
+  #   labels:
+  #     ofelia.job-exec.generate.schedule: "0 0 6 * * *"
+  #     ofelia.job-exec.generate.container: "seedsy-app-1"
+  #     ofelia.job-exec.generate.command: "wget -qO- --header='Authorization: Bearer ${CRON_SECRET}' http://localhost:3000/api/cron/generate"
+  #     ofelia.job-exec.visibility.schedule: "0 0 7 * * 1"
+  #     ofelia.job-exec.visibility.container: "seedsy-app-1"
+  #     ofelia.job-exec.visibility.command: "wget -qO- --header='Authorization: Bearer ${CRON_SECRET}' http://localhost:3000/api/cron/visibility"
