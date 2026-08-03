@@ -48,7 +48,9 @@ Tracked automatically. One step per day.
 - [x] add deployment config and docker files
 - [x] add AI and billing action components
 - [x] add project README and setup docs
+- [x] add vercel deployment config and next-env type declarations
 - [ ] add project docs and README
 - [ ] add vercel.json deployment config
 - [ ] add CI workflow for github actions
 - [ ] add remaining architecture and integration docs
+- [ ] add community files (code of conduct, contributing, security)
