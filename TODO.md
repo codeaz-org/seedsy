@@ -49,6 +49,7 @@ Tracked automatically. One step per day.
 - [x] add AI and billing action components
 - [x] add project README and setup docs
 - [x] add vercel deployment config and next-env type declarations
+- [x] add env example and gitignore
 - [ ] add project docs and README
 - [ ] add vercel.json deployment config
 - [ ] add CI workflow for github actions
